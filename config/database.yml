@@ -8,7 +8,7 @@ development:
   username: root
   password:
   host: localhost
-  database: to_go_eat-41356_development
+  database: to_go_eat_41356_development
 
 test:
   <<: *default
@@ -16,7 +16,7 @@ test:
   username: root
   password:
   host: localhost
-  database: to_go_eat-41356_test
+  database: to_go_eat_41356_test
 
 production:
   <<: *default
