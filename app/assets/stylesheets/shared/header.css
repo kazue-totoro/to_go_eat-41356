@@ -1,0 +1,70 @@
+.top-page-header {
+  width: 100vw;
+  height: 80px;
+  justify-content: space-between;
+  background-color:lightskyblue;
+}
+
+.top-page-header-contents{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5vw;
+  align-items: center;
+}
+
+.logo {
+  font-size: 45px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: white;
+}
+
+.user-lists {
+  width: 300px;
+  height: 80px;
+  display: flex;
+  justify-content: right;
+  list-style: none;
+  align-items: center;
+  font-size: 20px;
+}
+
+.login {
+  width: 60px;
+  height: 600px;
+  text-decoration: none;
+  margin-right: 15px;
+  padding: 12px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.sign-up {
+  width: 60px;
+  height: 600px;
+  text-decoration: none;
+  padding: 12px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.user-nickname {
+  width: 60px;
+  height: 600px;
+  text-decoration: none;
+  margin-right: 15px;
+  color: white;
+}
+
+.logout {
+  width: 60px;
+  height: 600px;
+  text-decoration: none;
+  padding: 12px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+

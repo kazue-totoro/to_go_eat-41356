@@ -1,0 +1,15 @@
+.login-btn {
+  width: 60%;
+  height: 35px;
+  margin: 0 auto;
+}
+
+.login-blue-btn {
+  width: 100%;
+  height: 100%;
+  background-color: lightskyblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+}
