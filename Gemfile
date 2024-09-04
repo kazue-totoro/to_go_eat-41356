@@ -79,3 +79,5 @@ end
 gem 'devise'
 
 gem 'google_places'
+gem 'geocoder'
+gem 'dotenv-rails'
