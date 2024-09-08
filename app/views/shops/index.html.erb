@@ -3,18 +3,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      #map {
-        height: 500px;
-        width: 100%;
-        }
-    </style>
     <script src="https://maps.google.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&region=JP&language=ja&libraries=places&callback=initMap" async defer>
     </script>
   </head>
 
   <body>
-    <div id="map"></div>
-    <div id="results"></div>
+    <div class="main">
+      <div class="map-and-shop-form-wrap">
+        <div id="map">
+        </div>
+        <div class="shop-form-wrap">
+          <h2 class="shop-form-title">行きたいお店を入力</h2>
+          <%#= form_with model: @shop, class: 'shop-form' local: true do |f| %>
+            <%#= f.text_field :name, class:"input-defolt", placeholder:"お店の名前" %>
+            <%#= f.text_field :address, class:"input-defolt", placeholder:"住所" %>
+            <%#= f.text_field :phone_number, class:"input-defolt", placeholder:"電話番号" %>
+            <%#= f.submit '追加', class:"add-btn" %>
+          <%# end %>
+        </div>
+      </div>
+      <ul class="shop-categories">
+        <li class="shop-category">cafe</li>
+        <li class="shop-category">restaurant</li>
+        <li class="shop-category">居酒屋</li>
+        <li class="shop-category">other</li>
+      </ul>
+    </div>
   </body>
 </html>
+
+

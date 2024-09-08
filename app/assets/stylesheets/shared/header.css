@@ -37,7 +37,7 @@
   padding: 12px;
   color: white;
   border: 1px solid white;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .sign-up {
@@ -47,7 +47,7 @@
   padding: 12px;
   color: white;
   border: 1px solid white;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .user-nickname {
@@ -65,6 +65,5 @@
   padding: 12px;
   color: white;
   border: 1px solid white;
-  border-radius: 5px;
+  border-radius: 10px;
 }
-
