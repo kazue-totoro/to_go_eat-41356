@@ -1,0 +1,51 @@
+.main {
+  background-color:floralwhite;
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+}
+
+.map-and-shop-form-wrap {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin-bottom: 80px;
+}
+
+#map {
+  height: 100%;
+  width: 600px;
+  }
+
+.shop-form-wrap{
+  height: 100%;
+  width: 600px;
+  display: flex;
+  color: sienna;
+}
+
+.shop-form-title {
+  width: 100%;
+}
+
+.shop-categories {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.shop-category {
+  height: 80px;
+  width: 250px;
+  background-color: lightskyblue;
+  border: 1px solid sienna;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 5px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
