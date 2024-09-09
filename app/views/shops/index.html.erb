@@ -1,5 +1,3 @@
-<%= render "shared/header" %>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,26 +6,50 @@
   </head>
 
   <body>
+    <%= render "shared/header" %>
     <div class="main">
-      <div class="map-and-shop-form-wrap">
-        <div id="map">
+      <% if user_signed_in? %>
+        <div class="map-and-shop-form-wrap">
+          <div id="map">
+          </div>
+          <div class="shop-form-wrap">
+            <h2 class="shop-form-title">行きたいお店を入力</h2>
+            <%= form_with model: @shop, class: 'shop-form', local: true do |f| %>
+              <div class="field">
+                <%= f.label :shop_category_id, "お店のカテゴリー" %><br />
+                <%= f.collection_select(:shop_category_id, ShopCategory.all, :id, :name, {}, {class:"select-box", id:"shop-category"}) %>
+              </div>
+              <div class="field">
+                <%= f.label :name, "お店の名前" %><br />
+                <%= f.text_field :name, class:"input-defolt", placeholder:"お店の名前" %>
+              </div>
+              <div class="field">
+                <%= f.label :address, "お店の住所" %><br />
+                <%= f.text_field :address, class:"input-defolt", placeholder:"住所" %>
+              </div>
+              <div class="field">
+                <%= f.label :phone_number, "電話番号" %><br />
+                <%= f.text_field :phone_number, class:"input-defolt", placeholder:"電話番号" %>
+              </div>
+              <div class="field">
+                <%= f.label :image, "画像" %><br />
+                <%= f.file_field :image, class:"shop-image", id:"shop-image" %>
+              </div>
+                <%= f.submit '追加', class:"add-btn" %>
+            <% end %>
+          </div>
         </div>
-        <div class="shop-form-wrap">
-          <h2 class="shop-form-title">行きたいお店を入力</h2>
-          <%#= form_with model: @shop, class: 'shop-form' local: true do |f| %>
-            <%#= f.text_field :name, class:"input-defolt", placeholder:"お店の名前" %>
-            <%#= f.text_field :address, class:"input-defolt", placeholder:"住所" %>
-            <%#= f.text_field :phone_number, class:"input-defolt", placeholder:"電話番号" %>
-            <%#= f.submit '追加', class:"add-btn" %>
-          <%# end %>
-        </div>
+        <ul class="shop-categories">
+          <li class="shop-category">cafe</li>
+          <li class="shop-category">restaurant</li>
+          <li class="shop-category">居酒屋</li>
+          <li class="shop-category">other</li>
+        </ul>
+      <% else %>
+      <div class="sign-up-message">
+        新規登録して始めよう!
       </div>
-      <ul class="shop-categories">
-        <li class="shop-category">cafe</li>
-        <li class="shop-category">restaurant</li>
-        <li class="shop-category">居酒屋</li>
-        <li class="shop-category">other</li>
-      </ul>
+      <% end %>
     </div>
   </body>
 </html>
