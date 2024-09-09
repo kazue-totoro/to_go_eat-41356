@@ -14,6 +14,4 @@ class User < ApplicationRecord
 
   has_many :user_shops
   has_many :shops, through: :user_shops
-  has_many :comments
-  has_many :bookmarks
 end
