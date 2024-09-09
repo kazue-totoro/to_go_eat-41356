@@ -5,6 +5,7 @@ class CreateShops < ActiveRecord::Migration[7.0]
       t.string     :name            , null: false
       t.string     :address
       t.string     :phone_number
+      t.references :user            , null: false, foreign_key: true
       t.timestamps
     end
   end
