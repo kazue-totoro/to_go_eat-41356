@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_09_024458) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_09_033230) do
   create_table "active_storage_attachments", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -48,6 +48,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_09_024458) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "user_shops", charset: "utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "shop_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shop_id"], name: "index_user_shops_on_shop_id"
+    t.index ["user_id"], name: "index_user_shops_on_user_id"
+  end
+
   create_table "users", charset: "utf8", force: :cascade do |t|
     t.string "nickname", null: false
     t.string "email", default: "", null: false
@@ -68,4 +77,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_09_024458) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "user_shops", "shops"
+  add_foreign_key "user_shops", "users"
 end
