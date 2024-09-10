@@ -1,0 +1,8 @@
+.edit-shop-form-wrap {
+  height: 100%;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  color: sienna;
+}
