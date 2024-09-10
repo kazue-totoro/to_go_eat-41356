@@ -40,10 +40,11 @@
           </div>
         </div>
         <ul class="shop-categories">
-          <li class="shop-category">cafe</li>
-          <li class="shop-category">restaurant</li>
-          <li class="shop-category">居酒屋</li>
-          <li class="shop-category">other</li>
+          <% ShopCategory.all.each do |category| %>
+            <% unless category.name == '---' %>
+              <li><%= link_to category.name, list_shops_path(shop_category_id: category.id), class: 'shop-category' %></li>
+            <% end %>
+          <% end %>
         </ul>
       <% else %>
       <div class="sign-up-message">
