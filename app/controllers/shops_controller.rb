@@ -12,6 +12,10 @@ class ShopsController < ApplicationController
     end
   end
 
+  def list
+    @shops = Shop.where(shop_category_id: params[:shop_category_id]).order(created_at: :desc)
+  end
+
   private
 
   def shop_params

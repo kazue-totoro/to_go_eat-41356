@@ -1,0 +1,16 @@
+<%= render "shared/header" %>
+<div class="main">
+  <div class="shop-list-contents-wrap">
+    <% @shops.each do |shop| %>
+      <div class="shop-list-content-wrap">
+        <div class='shop-img-content'>
+          <%= image_tag shop.image, class: "shop-img" %>
+        </div>
+        <div class="shop-list-content">店名：<%= shop.name %></div>
+        <div class="shop-list-content">住所：<%= shop.address %></div>
+        <div class="shop-list-content">電話：<%= shop.phone_number%></div>
+      </div>
+    <% end %>
+  </div>
+
+</div>
