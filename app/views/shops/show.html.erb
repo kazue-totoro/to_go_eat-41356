@@ -1,0 +1,14 @@
+<%= render "shared/header" %>
+<div class="main">
+  <div class="show-shop-content-wrap">
+    <%= image_tag @shop.image, class: "show-shop-content__img" %>
+    <div class="show-shop-explain">
+      <div class="show-shop-content">店名：<%= @shop.name %></div>
+      <div class="show-shop-content">住所：<%= @shop.address %></div>
+      <div class="show-shop-content">電話：<%= @shop.phone_number%></div>
+      <% if (user_signed_in?) && (current_user.id == @shop.user_id) %>
+        <%#= link_to "お店の編集", "#", class: "show-shop-btn" do %><%# end %>
+        <%#= link_to "お店の削除", "#", class: "show-shop-btn" do %><%# end %>
+      <% end %>
+    </div>
+</div>
