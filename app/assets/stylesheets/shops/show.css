@@ -15,9 +15,21 @@
   height: 100%;
   width: 300px;
   color: sienna;
+  font-size: 20px;
 }
 
 .show-shop-content {
-  padding-bottom: 5px;
-  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.show-shop-btn {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: sienna;
+  padding: 3px;
 }
