@@ -1,0 +1,23 @@
+.show-shop-content-wrap {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.show-shop-content__img {
+  height: 100%;
+  width: 300px;
+  object-fit: cover;
+  margin-right: 30px;
+}
+
+.show-shop-explain{
+  height: 100%;
+  width: 300px;
+  color: sienna;
+}
+
+.show-shop-content {
+  padding-bottom: 5px;
+  font-size: 20px;
+}
