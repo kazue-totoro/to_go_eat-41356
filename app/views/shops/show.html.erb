@@ -8,7 +8,7 @@
       <div class="show-shop-content">電話：<%= @shop.phone_number%></div>
       <% if (user_signed_in?) && (current_user.id == @shop.user_id) %>
         <%= link_to "お店の編集", edit_shop_path, class: "show-shop-btn" %>
-        <%#= link_to "お店の削除", "#", class: "show-shop-btn" %>
+        <%= link_to "お店の削除", shop_path(@shop), data: { turbo_method: :delete }, class: "show-shop-btn" %>
       <% end %>
     </div>
 </div>

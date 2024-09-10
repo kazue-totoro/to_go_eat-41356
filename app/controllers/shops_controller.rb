@@ -1,6 +1,6 @@
 class ShopsController < ApplicationController
-  before_action :authenticate_user!, only: [:edit]
-  before_action :set_shop, only: [:show, :edit, :update]
+  before_action :authenticate_user!, only: [:edit, :destroy]
+  before_action :set_shop, only: [:show, :edit, :update, :destroy]
 
   def index
     @shop = Shop.new
@@ -25,6 +25,11 @@ class ShopsController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @shop.destroy
+    redirect_to root_path
   end
 
   private
