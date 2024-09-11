@@ -1,18 +1,18 @@
 .show-shop-content-wrap {
-  height: 400px;
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
 
 .show-shop-content__img {
-  height: 100%;
+  height: 400px;
   width: 300px;
   object-fit: cover;
   margin-right: 30px;
 }
 
 .show-shop-explain{
-  height: 100%;
+  height: 400px;
   width: 300px;
   color: sienna;
   font-size: 20px;
