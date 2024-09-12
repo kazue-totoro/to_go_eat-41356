@@ -1,111 +1,114 @@
-# README
+# To Go  Eat
+<br>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## ■ アプリケーション概要
+  「To Go  Eat」は行きたい飲食店をカテゴリー別に保存し、一覧で表示できるサービスです。
 
-Things you may want to cover:
+<br>
 
-* Ruby version
+## ■ サービスURL
+  https://to-go-eat-41356.onrender.com/
 
-* System dependencies
+<br>
 
-* Configuration
+## ■ テスト用アカウント
+  - Basic認証パスワード：admin
+  - Basic認証ID：2222
+  - メールアドレス：a@gmail.com
+  - パスワード：aaa111
 
-* Database creation
+<br>
 
-* Database initialization
+## ■ 利用方法
+  1. トップページのヘッダーからユーザー新規登録を行います。
+  2. トップページの入力フォームに行きたいお店を入力し追加します。
+  3. トップページ下部のカテゴリーをクリックし追加したお店の一覧を表示します。
 
-* How to run the test suite
+<br>
 
-* Services (job queues, cache servers, search engines, etc.)
+## ■ アプリケーションを制作した背景
+私は美味しいご飯屋さんや素敵なカフェを探して巡るのが趣味です。しかし、行きたいお店がたくさんありすぎて管理が難しくなってきました。そこで、保存してカテゴリー別に一覧で簡単に確認できるサービスが欲しいと思いこのアプリケーションを開発しました。
 
-* Deployment instructions
+<br>
 
-* ...
+## ■ 実装した機能
 
-# テーブル設計
+__ユーザー管理機能__
+ - 新規登録
+ [![Image from Gyazo](https://i.gyazo.com/5f16430e7e3c9f26effa9e7a02a48953.png)](https://gyazo.com/5f16430e7e3c9f26effa9e7a02a48953)
 
-## users テーブル
+ - ログイン機能
+ [![Image from Gyazo](https://i.gyazo.com/ae75b8d6e909e8bc72caa2fd8b05726e.png)](https://gyazo.com/ae75b8d6e909e8bc72caa2fd8b05726e)
 
-| Column             | Type   | Options     |
-| ------------------ | ------ | ----------- |
-| nickname           | string | null: false |
-| email              | string | null: false, unique: true |
-| encrypted_password | string | null: false |
-| family_name        | string | null: false |
-| first_name         | string | null: false |
-| family_name_kana   | string | null: false |
-| first_name_kana    | string | null: false |
-| birth_day          | date   | null: false |
+<br>
 
-### Association
+__行きたいお店管理機能__
 
-- has_many :user_shops
-- has_many :shops, through: :user_shops
-- has_many :comments
-- has_many :bookmarks
+ - リストに追加
+ [![Image from Gyazo](https://i.gyazo.com/f992e9334b5f7f4103b109324f4585f6.gif)](https://gyazo.com/f992e9334b5f7f4103b109324f4585f6)
 
+ - 一覧表示
+ [![Image from Gyazo](https://i.gyazo.com/c5632bf94c2fd5cedb4542dd65983d10.gif)](https://gyazo.com/c5632bf94c2fd5cedb4542dd65983d10)
 
-## shops テーブル
+- 行きたいお店を編集
+ [![Image from Gyazo](https://i.gyazo.com/24b215a4a6a14aabd2e1187ee68895af.gif)](https://gyazo.com/24b215a4a6a14aabd2e1187ee68895af)
 
+- 行きたいお店を削除
+ [![Image from Gyazo](https://i.gyazo.com/479f7b95cd5c6dc7f3b1a6d2df05a5aa.gif)](https://gyazo.com/479f7b95cd5c6dc7f3b1a6d2df05a5aa)
+
+<br>
+
+## ■ 実装予定の機能
+
+ - google mapで表示した場所にあるお店にピンを立てます。選択したピンの情報を保存する機能を実装予定です。
+ - 行ったお店と言っていないお店の区別をつけるために、行ったことを示す印をつける予定です。
+
+<br>
+
+## ■ データベース設計（ER図）
+
+[![Image from Gyazo](https://i.gyazo.com/68495e75c29d425e097803c31173298f.png)](https://gyazo.com/68495e75c29d425e097803c31173298f)
+
+なお、shops テーブルについては今後ER図の通り実装予定で、現在は以下の通りです。
+#### 現在のテーブル ####
 | Column           | Type    | Options     |
 | ---------------- | ------- | ----------- |
 | shop_category_id | integer | null: false |
 | name             | string  | null: false |
 | address          | string  | null: false |
-| latitude         | float   | null: false |
-| longitude        | float   | null: false |
 | phone_number     | string  | null: false |
-| opening_hours    | text    | null: false |
-| closing_hours    | string  | null: false |
-| website          | text    | null: false |
-| access           | string  | null: false |
-| photo_reference  | text    | null: false |
-| photo_url        | text    | null: false |
 
-### Association
+<br>
 
-- has_many :user_shops
-- has_many :users, through: :user_shops
-- has_many :comments
-- has_many :bookmarks
+## ■ 開発環境
 
+__フロントエンド__
+ - HTML / SCSS
+ - JavaScript
 
-## user_shops テーブル
+__バックエンド__
+ - Ruby 3.2.0
+ - Ruby on Rails 7.0.8.4 
 
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| shop   | references | null: false, foreign_key: true |
+__インフラ__
+ - PostgreSQL 14.13
 
-### Association
+__テスト__
+ - RSpec
+ - factory_bot
+ - faker
 
-- belongs_to :shop
-- belongs_to :user
+__その他使用ツール__
+ - devise
+ - rubocop
+ - GoogleMaps API
+ - google_places
+ - Active Storage
+ - Active Hash
 
+<br>
 
-## comments テーブル
+## ■ 工夫したポイント
 
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| content | text       | null: false                    |
-| user    | references | null: false, foreign_key: true |
-| shop    | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :shop
-- belongs_to :user
-
-
-## bookmarks テーブル
-
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| user    | references | null: false, foreign_key: true |
-| shop    | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :shop
-- belongs_to :user
+ - お店を探すときに、カフェや居酒屋などのカテゴリー別に分けると便利だと思いました。そこで、お店をカテゴリーごとに閲覧できるように、Active Hashを使って分類しました。
+ - 現在、実装途中ですが、Google Mapsでお店を検索し、保存できる機能を追加すると便利だと思い実装を進めています。
