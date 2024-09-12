@@ -3,6 +3,9 @@
   <div class="edit-shop-form-wrap">
     <h2 class="shop-form-title">行きたいお店を編集</h2>
       <%= form_with model: @shop, class: 'shop-form', local: true do |f| %>
+      
+      <%= render 'shared/error_messages', model: f.object %>
+
         <div class="field">
           <%= f.label :shop_category_id, "お店のカテゴリー" %><br />
           <%= f.collection_select(:shop_category_id, ShopCategory.all, :id, :name, {}, {class:"select-box", id:"shop-category"}) %>
