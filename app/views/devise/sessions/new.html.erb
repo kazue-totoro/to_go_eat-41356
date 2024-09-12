@@ -6,7 +6,8 @@
     ログイン
   </div>
 
-  <%# render 'shared/error_messages', model: f.object %>
+  <%= flash[:notice] %>
+  <%= flash[:alert] %>  
   <div class="form-group-wrap">
     <div class= "form-group">
       <label class="form-text" for="email">メールアドレス</label>
