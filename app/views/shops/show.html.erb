@@ -4,11 +4,16 @@
     <%= image_tag @shop.image, class: "show-shop-content__img" %>
     <div class="show-shop-explain">
       <div class="show-shop-content">店名：<%= @shop.name %></div>
+      <div class="show-shop-content">最 寄 駅：<%= @shop.nearest_station %></div>
+      <div class="show-shop-content">営業時間：<%= @shop.opening_hours %></div>
       <div class="show-shop-content">住所：<%= @shop.address %></div>
       <div class="show-shop-content">電話：<%= @shop.phone_number%></div>
+      <div class="show-shop-content">メモ：<%= @shop.memo%></div>
       <% if (user_signed_in?) && (current_user.id == @shop.user_id) %>
         <%= link_to "お店の編集", edit_shop_path, class: "show-shop-btn" %>
         <%= link_to "お店の削除", shop_path(@shop), data: { turbo_method: :delete }, class: "show-shop-btn" %>
       <% end %>
     </div>
+  </div>
+  <%= render "shared/footer" %>
 </div>

@@ -1,8 +1,7 @@
 .edit-shop-form-wrap {
-  height: 100vh;
   width: 600px;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 auto 80px;
   color: sienna;
 }

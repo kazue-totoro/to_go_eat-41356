@@ -1,0 +1,7 @@
+<ul class="shop-categories">
+  <% ShopCategory.all.each do |category| %>
+    <% unless category.name == '---' %>
+      <li><%= link_to category.name, list_shops_path(shop_category_id: category.id), class: 'shop-category' %></li>
+    <% end %>
+  <% end %>
+</ul>
