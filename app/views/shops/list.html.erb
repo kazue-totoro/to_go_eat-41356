@@ -10,6 +10,10 @@
         <div class="shop-list-content">最寄駅：<%= shop.nearest_station %></div>
         <div class="shop-list-content">営業時間：<%= shop.opening_hours %></div>
       <% end %>
+      <div class="shop-list-check_box">
+        訪問済み
+        <%= check_box_tag "visited_#{shop.id}", '1', shop.visited %>
+      </div>
     <% end %>
   </div>
   <%= render "shared/footer" %>
