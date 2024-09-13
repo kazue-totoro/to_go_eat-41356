@@ -75,8 +75,10 @@ __行きたいお店管理機能__
 | ---------------- | ------- | ----------- |
 | shop_category_id | integer | null: false |
 | name             | string  | null: false |
-| address          | string  | null: false |
-| phone_number     | string  | null: false |
+| address          | string  |             |
+| phone_number     | string  |             |
+| opening_hours    | string  |             |
+| nearest_station  | string  |             |
 
 <br>
 
