@@ -4,7 +4,7 @@
     <h2 class="shop-form-title">行きたいお店を編集</h2>
       <%= form_with model: @shop, class: 'shop-form', local: true do |f| %>
       
-      <%= render 'shared/error_messages', model: f.object %>
+        <%= render 'shared/error_messages', model: f.object %>
 
         <div class="field">
           <%= f.label :shop_category_id, "お店のカテゴリー" %><br />
@@ -15,8 +15,16 @@
           <%= f.text_field :name, class:"input-defolt", placeholder:"お店の名前" %>
         </div>
         <div class="field">
+          <%= f.label :nearest_station, "最寄駅" %><br />
+          <%= f.text_field :nearest_station, class:"input-defolt", placeholder:"最寄駅" %>
+        </div>
+        <div class="field">
+          <%= f.label :opening_hours, "営業時間" %><br />
+          <%= f.text_field :opening_hours, class:"input-defolt", placeholder:"営業時間" %>
+        </div>
+        <div class="field">
           <%= f.label :address, "お店の住所" %><br />
-          <%= f.text_field :address, class:"input-defolt", placeholder:"住所" %>
+           <%= f.text_field :address, class:"input-defolt", placeholder:"住所" %>
         </div>
         <div class="field">
           <%= f.label :phone_number, "電話番号" %><br />
@@ -26,7 +34,12 @@
           <%= f.label :image, "画像" %><br />
           <%= f.file_field :image, class:"shop-image", id:"shop-image" %>
         </div>
-          <%= f.submit '変更する', class:"add-btn" %>
+        <div class="field">
+          <%= f.label :memo, "メモ" %><br />
+          <%= f.text_field :memo, class:"input-defolt", placeholder:"メモ" %>
+        </div>
+          <%= f.submit '追加', class:"add-btn" %>
       <% end %>
   </div>
+  <%= render "shared/footer" %>
 </div>

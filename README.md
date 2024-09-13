@@ -79,6 +79,7 @@ __行きたいお店管理機能__
 | phone_number     | string  |             |
 | opening_hours    | string  |             |
 | nearest_station  | string  |             |
+| memo             | text    |             |
 
 <br>
 

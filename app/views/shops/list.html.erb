@@ -7,9 +7,10 @@
           <%= image_tag shop.image, class: "shop-img" %>
         </div>
         <div class="shop-list-content">店名：<%= shop.name %></div>
-        <div class="shop-list-content">住所：<%= shop.address %></div>
-        <div class="shop-list-content">電話：<%= shop.phone_number%></div>
+        <div class="shop-list-content">最寄駅：<%= shop.nearest_station %></div>
+        <div class="shop-list-content">営業時間：<%= shop.opening_hours %></div>
       <% end %>
     <% end %>
   </div>
+  <%= render "shared/footer" %>
 </div>
