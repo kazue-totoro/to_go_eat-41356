@@ -45,19 +45,19 @@ __ユーザー管理機能__
 __行きたいお店管理機能__
 
  - リストに追加
- [![Image from Gyazo](https://i.gyazo.com/f992e9334b5f7f4103b109324f4585f6.gif)](https://gyazo.com/f992e9334b5f7f4103b109324f4585f6)
+[![Image from Gyazo](https://i.gyazo.com/f992e9334b5f7f4103b109324f4585f6.gif)](https://gyazo.com/f992e9334b5f7f4103b109324f4585f6)
 
 
  - 一覧表示
- [![Image from Gyazo](https://i.gyazo.com/c5632bf94c2fd5cedb4542dd65983d10.gif)](https://gyazo.com/c5632bf94c2fd5cedb4542dd65983d10)
+[![Image from Gyazo](https://i.gyazo.com/c5632bf94c2fd5cedb4542dd65983d10.gif)](https://gyazo.com/c5632bf94c2fd5cedb4542dd65983d10)
 
 
 - 行きたいお店を編集
- [![Image from Gyazo](https://i.gyazo.com/24b215a4a6a14aabd2e1187ee68895af.gif)](https://gyazo.com/24b215a4a6a14aabd2e1187ee68895af)
+[![Image from Gyazo](https://i.gyazo.com/24b215a4a6a14aabd2e1187ee68895af.gif)](https://gyazo.com/24b215a4a6a14aabd2e1187ee68895af)
 
 
 - 行きたいお店を削除
- [![Image from Gyazo](https://i.gyazo.com/479f7b95cd5c6dc7f3b1a6d2df05a5aa.gif)](https://gyazo.com/479f7b95cd5c6dc7f3b1a6d2df05a5aa)
+[![Image from Gyazo](https://i.gyazo.com/479f7b95cd5c6dc7f3b1a6d2df05a5aa.gif)](https://gyazo.com/479f7b95cd5c6dc7f3b1a6d2df05a5aa)
 
 
 <br>
