@@ -47,20 +47,14 @@ __行きたいお店管理機能__
  - リストに追加
 [![Image from Gyazo](https://i.gyazo.com/f992e9334b5f7f4103b109324f4585f6.gif)](https://gyazo.com/f992e9334b5f7f4103b109324f4585f6)
 
-<br>
-
  - 一覧表示
-[![Image from Gyazo](https://i.gyazo.com/8ca4de9c8f7bdf5f070451edae929d34.gif)](https://gyazo.com/8ca4de9c8f7bdf5f070451edae929d34)
-
-<br>
+[![Image from Gyazo](https://i.gyazo.com/2f288e869e83339b1899c0a84503b7ef.jpg)](https://gyazo.com/2f288e869e83339b1899c0a84503b7ef)
 
 - 行きたいお店を編集
 [![Image from Gyazo](https://i.gyazo.com/24b215a4a6a14aabd2e1187ee68895af.gif)](https://gyazo.com/24b215a4a6a14aabd2e1187ee68895af)
 
-<br>
-
 - 行きたいお店を削除
-[![Image from Gyazo](https://i.gyazo.com/ff67ec75596f8a849b9ac8edd8768f28.gif)](https://gyazo.com/ff67ec75596f8a849b9ac8edd8768f28)
+[![Image from Gyazo](https://i.gyazo.com/80f3d67818c2b323203c3e866f5431a8.jpg)](https://gyazo.com/80f3d67818c2b323203c3e866f5431a8)
 
 <br>
 
