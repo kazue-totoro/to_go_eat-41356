@@ -2,14 +2,20 @@
 <div class="main">
   <div class="shop-list-contents-wrap">
     <% @shops.each do |shop| %>
-      <%= link_to shop_path(shop.id), class: "shop-list-content-wrap" do %>
-        <div class='shop-img-content'>
-          <%= image_tag shop.image, class: "shop-img" %>
+      <div class='shop-list-content-wrap'>
+        <%= link_to shop_path(shop.id), class: "shop-list-link-wrap" do %>
+          <div class='shop-img-content'>
+            <%= image_tag shop.image, class: "shop-img" %>
+          </div>
+          <div class="shop-list-content">店名：<%= shop.name %></div>
+          <div class="shop-list-content">最寄駅：<%= shop.nearest_station %></div>
+          <div class="shop-list-content">営業時間：<%= shop.opening_hours %></div>
+        <% end %>
+        <div class="shop-list-check_box">
+          訪問済み
+          <%= check_box_tag "visited_#{shop.id}", '1', shop.visited %>
         </div>
-        <div class="shop-list-content">店名：<%= shop.name %></div>
-        <div class="shop-list-content">最寄駅：<%= shop.nearest_station %></div>
-        <div class="shop-list-content">営業時間：<%= shop.opening_hours %></div>
-      <% end %>
+      </div>
     <% end %>
   </div>
   <%= render "shared/footer" %>
