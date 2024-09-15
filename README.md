@@ -48,12 +48,21 @@ __行きたいお店管理機能__
 [![Image from Gyazo](https://i.gyazo.com/f992e9334b5f7f4103b109324f4585f6.gif)](https://gyazo.com/f992e9334b5f7f4103b109324f4585f6)
 
 
+
+
+
+
  - 一覧表示
 [![Image from Gyazo](https://i.gyazo.com/8ca4de9c8f7bdf5f070451edae929d34.gif)](https://gyazo.com/8ca4de9c8f7bdf5f070451edae929d34)
 
 
+
+
+
 - 行きたいお店を編集
 [![Image from Gyazo](https://i.gyazo.com/24b215a4a6a14aabd2e1187ee68895af.gif)](https://gyazo.com/24b215a4a6a14aabd2e1187ee68895af)
+
+
 
 
 - 行きたいお店を削除
