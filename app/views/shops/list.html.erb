@@ -12,8 +12,10 @@
           <div class="shop-list-content">営業時間：<%= shop.opening_hours %></div>
         <% end %>
         <div class="shop-list-check_box">
-          訪問済み
-          <%= check_box_tag "visited_#{shop.id}", '1', shop.visited %>
+          <%= form_with model: shop, url: shop_path(shop), local: true, method: :patch do |f| %>
+            訪問済み
+            <%= f.check_box :visited, include_hidden: false %>
+          <% end %>
         </div>
       </div>
     <% end %>
